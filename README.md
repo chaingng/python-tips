@@ -95,7 +95,7 @@ Usage: thingy [OPTIONS]
 
 ```
 
-### String epeated with `*`
+### String repeated with `*`
 ```
 >>> # 3 times 'un', followed by 'ium'
 >>> 3 * 'un' + 'ium'
@@ -164,5 +164,82 @@ TypeError: 'str' object does not support item assignment
 >>> s = 'supercalifragilisticexpialidocious'
 >>> len(s)
 34
+```
+
+## Lists
+
+### support operations like concatenation
+```
+>>> squares + [36, 49, 64, 81, 100]
+[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+
+```
+
+### lists are a mutable
+```
+>>> cubes = [1, 8, 27, 65, 125]  # something's wrong here
+>>> 4 ** 3  # the cube of 4 is 64, not 65!
+64
+>>> cubes[3] = 64  # replace the wrong value
+>>> cubes
+[1, 8, 27, 64, 125]
+```
+
+### add new items
+```
+>>> cubes.append(343)  # and the cube of 7
+>>> cubes
+[1, 8, 27, 64, 125, 216, 343]
+```
+
+### Assignment to slices is also possible
+```
+>>> letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+>>> letters
+['a', 'b', 'c', 'd', 'e', 'f', 'g']
+>>> # replace some values
+>>> letters[2:5] = ['C', 'D', 'E']
+>>> letters
+['a', 'b', 'C', 'D', 'E', 'f', 'g']
+>>> # now remove them
+>>> letters[2:5] = []
+>>> letters
+['a', 'b', 'f', 'g']
+>>> # clear the list by replacing all the elements with an empty list
+>>> letters[:] = []
+>>> letters
+[]
+```
+
+### possible to nest lists
+```
+>>> a = ['a', 'b', 'c']
+>>> n = [1, 2, 3]
+>>> x = [a, n]
+>>> x
+[['a', 'b', 'c'], [1, 2, 3]]
+>>> x[0]
+['a', 'b', 'c']
+>>> x[0][1]
+'b'
+```
+
+## print
+
+
+```
+>>> i = 256*256
+>>> print('The value of i is', i)
+The value of i is 65536
+```
+
+### argument `end` can be used to avoid the newline after the output, or end the output with a different string
+```
+>>> a, b = 0, 1
+>>> while b < 1000:
+...     print(b, end=',')
+...     a, b = b, a+b
+...
+1,1,2,3,5,8,13,21,34,55,89,144,233,377,610,987,
 ```
 
