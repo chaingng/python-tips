@@ -271,6 +271,7 @@ More
 cat 3
 window 6
 defenestrate 12
+```
 
 ## If you need to modify the sequence you are iterating over while inside the loop
 - use
@@ -377,7 +378,6 @@ Found a number 9
 
 ## function
 
-### docstring
 ```
 >>> def fib(n):    # write Fibonacci series up to n
 ...     """Print a Fibonacci series up to n."""
@@ -455,5 +455,141 @@ print(f(3))
 # [1]
 # [1, 2]
 # [1, 2, 3]
+```
+
+instead:
+```
+def f(a, L=None):
+    if L is None:
+        L = []
+    L.append(a)
+    return L
+```
+
+### Keyworad Arguments
+```
+def parrot(voltage, state='a stiff', action='voom', type='Norwegian Blue'):
+    print("-- This parrot wouldn't", action, end=' ')
+    print("if you put", voltage, "volts through it.")
+    print("-- Lovely plumage, the", type)
+    print("-- It's", state, "!")
+```
+
+valid:
+```
+parrot(1000)                                          # 1 positional argument
+parrot(voltage=1000)                                  # 1 keyword argument
+parrot(voltage=1000000, action='VOOOOOM')             # 2 keyword arguments
+parrot(action='VOOOOOM', voltage=1000000)             # 2 keyword arguments
+parrot('a million', 'bereft of life', 'jump')         # 3 positional arguments
+parrot('a thousand', state='pushing up the daisies')  # 1 positional, 1 keyword
+```
+
+invalid:
+```
+parrot()                     # required argument missing
+parrot(voltage=5.0, 'dead')  # non-keyword argument after a keyword argument
+parrot(110, voltage=220)     # duplicate value for the same argument
+parrot(actor='John Cleese')  # unknown keyword argument
+```
+
+### `*name` and `**name` 
+```
+def cheeseshop(kind, *arguments, **keywords):
+    print("-- Do you have any", kind, "?")
+    print("-- I'm sorry, we're all out of", kind)
+    for arg in arguments:
+        print(arg)
+    print("-" * 40)
+    for kw in keywords:
+        print(kw, ":", keywords[kw])
+```
+
+call like this:
+```
+cheeseshop("Limburger", "It's very runny, sir.",
+           "It's really very, VERY runny, sir.",
+           shopkeeper="Michael Palin",
+           client="John Cleese",
+           sketch="Cheese Shop Sketch")
+```
+
+would print:
+```
+-- Do you have any Limburger ?
+-- I'm sorry, we're all out of Limburger
+It's very runny, sir.
+It's really very, VERY runny, sir.
+----------------------------------------
+shopkeeper : Michael Palin
+client : John Cleese
+sketch : Cheese Shop Sketch
+```
+
+### `*name`
+```
+>>> def concat(*args, sep="/"):
+...     return sep.join(args)
+...
+>>> concat("earth", "mars", "venus")
+'earth/mars/venus'
+>>> concat("earth", "mars", "venus", sep=".")
+'earth.mars.venus'
+```
+
+### `*` -operator to unpack the arguments out of a list or tuple
+```
+>>> list(range(3, 6))            # normal call with separate arguments
+[3, 4, 5]
+>>> args = [3, 6]
+>>> list(range(*args))            # call with arguments unpacked from a list
+[3, 4, 5]
+```
+
+### dictionaries can deliver keyword arguments with the `**` -operator
+```
+>>> def parrot(voltage, state='a stiff', action='voom'):
+...     print("-- This parrot wouldn't", action, end=' ')
+...     print("if you put", voltage, "volts through it.", end=' ')
+...     print("E's", state, "!")
+...
+>>> d = {"voltage": "four million", "state": "bleedin' demised", "action": "VOOM"}
+>>> parrot(**d)
+-- This parrot wouldn't VOOM if you put four million volts through it. E's bleedin' demised !
+```
+
+## lambda
+```
+>>> def make_incrementor(n):
+...     return lambda x: x + n
+...
+>>> f = make_incrementor(42)
+>>> f(0)
+42
+>>> f(1)
+43
+```
+
+### for sorting
+```
+>>> pairs = [(1, 'one'), (2, 'two'), (3, 'three'), (4, 'four')]
+>>> pairs.sort(key=lambda pair: pair[1])
+>>> pairs
+[(4, 'four'), (1, 'one'), (3, 'three'), (2, 'two')]
+```
+
+### docstring
+```
+>>> def my_function():
+...     """Do nothing, but document it.
+...
+...     No, really, it doesn't do anything.
+...     """
+...     pass
+...
+>>> print(my_function.__doc__)
+Do nothing, but document it.
+
+    No, really, it doesn't do anything.
 ```
 
