@@ -243,3 +243,217 @@ The value of i is 65536
 1,1,2,3,5,8,13,21,34,55,89,144,233,377,610,987,
 ```
 
+## if
+### elif and else
+```
+>>> x = int(input("Please enter an integer: "))
+Please enter an integer: 42
+>>> if x < 0:
+...     x = 0
+...     print('Negative changed to zero')
+... elif x == 0:
+...     print('Zero')
+... elif x == 1:
+...     print('Single')
+... else:
+...     print('More')
+...
+More
+```
+
+## for
+```
+>>> # Measure some strings:
+... words = ['cat', 'window', 'defenestrate']
+>>> for w in words:
+...     print(w, len(w))
+...
+cat 3
+window 6
+defenestrate 12
+
+## If you need to modify the sequence you are iterating over while inside the loop
+- use
+  - you first make a copy
+- why?
+  - not safe.
+```
+>>> for w in words[:]:  # Loop over a slice copy of the entire list.
+...     if len(w) > 6:
+...         words.insert(0, w)
+...
+>>> words
+['defenestrate', 'cat', 'window', 'defenestrate']
+```
+
+## range()
+```
+>>> for i in range(5):
+...     print(i)
+...
+0
+1
+2
+3
+4
+```
+
+### to specify a different increment
+```
+range(5, 10)
+   5 through 9
+
+range(0, 10, 3)
+   0, 3, 6, 9
+
+range(-10, -100, -30)
+  -10, -40, -70
+```
+
+### A strange thing happens if you just print a range
+- why?
+  - It is an object which returns the successive items of the desired sequence when you iterate over it, but it doesn’t really make the list, thus saving space
+
+```
+>>> print(range(10))
+range(0, 10)
+```
+
+### creates lists from iterables
+```
+>>> list(range(5))
+[0, 1, 2, 3, 4]
+```
+
+## break
+
+### else
+it is executed when the loop terminates through exhaustion of the list (with for) or when the condition becomes false (with while), but not when the loop is terminated by a break statement
+
+```
+>>> for n in range(2, 10):
+...     for x in range(2, n):
+...         if n % x == 0:
+...             print(n, 'equals', x, '*', n//x)
+...             break
+...     else:
+...         # loop fell through without finding a factor
+...         print(n, 'is a prime number')
+...
+2 is a prime number
+3 is a prime number
+4 equals 2 * 2
+5 is a prime number
+6 equals 2 * 3
+7 is a prime number
+8 equals 2 * 4
+9 equals 3 * 3
+```
+
+### `continue` continues with the next iteration of the loop
+```
+>>> for num in range(2, 10):
+...     if num % 2 == 0:
+...         print("Found an even number", num)
+...         continue
+...     print("Found a number", num)
+Found an even number 2
+Found a number 3
+Found an even number 4
+Found a number 5
+Found an even number 6
+Found a number 7
+Found an even number 8
+Found a number 9
+```
+
+## pass
+
+### does nothing
+```
+>>> while True:
+...     pass  # Busy-wait for keyboard interrupt (Ctrl+C)
+```
+
+## function
+
+### docstring
+```
+>>> def fib(n):    # write Fibonacci series up to n
+...     """Print a Fibonacci series up to n."""
+...     a, b = 0, 1
+...     while a < n:
+...         print(a, end=' ')
+...         a, b = b, a+b
+...     print()
+...
+>>> # Now call the function we just defined:
+... fib(2000)
+0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597
+
+```
+
+### rename
+```
+>>> fib
+<function fib at 10042ed0>
+>>> f = fib
+>>> f(100)
+0 1 1 2 3 5 8 13 21 34 55 89
+```
+
+### return None
+```
+>>> fib(0)
+>>> print(fib(0))
+None
+```
+
+### Default Argument Values
+
+- giving only the mandatory argument: ask_ok('Do you really want to quit?')
+- giving one of the optional arguments: ask_ok('OK to overwrite the file?', 2)
+- or even giving all arguments: ask_ok('OK to overwrite the file?', 2, 'Come on, only yes or no!')
+
+```
+def ask_ok(prompt, retries=4, reminder='Please try again!'):
+    while True:
+        ok = input(prompt)
+        if ok in ('y', 'ye', 'yes'):
+            return True
+        if ok in ('n', 'no', 'nop', 'nope'):
+            return False
+        retries = retries - 1
+        if retries < 0:
+            raise ValueError('invalid user response')
+        print(reminder)
+```
+
+### default values are evaluated at the point of function definition in the defining scope
+```
+i = 5
+
+def f(arg=i):
+    print(arg)
+
+i = 6
+f()
+# will print 5
+```
+
+### Warning: The default value is evaluated only once
+```
+def f(a, L=[]):
+    L.append(a)
+    return L
+
+print(f(1))
+print(f(2))
+print(f(3))
+
+# will print
+# [1]
+# [1, 2]
+# [1, 2, 3]
+```
+
