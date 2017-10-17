@@ -8,6 +8,7 @@ for language reference, see [Python Language Reference](https://docs.python.jp/3
 
 ## Index
 [lists](https://github.com/chaingng/python-tips/blob/master/list.md)
+[modules](https://github.com/chaingng/python-tips/blob/master/modules.md)
 
 ## Interpreter
 
