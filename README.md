@@ -7,8 +7,8 @@ for standard objects and modules, see [Python Standard Library](https://docs.pyt
 for language reference, see [Python Language Reference](https://docs.python.jp/3/reference/index.html#reference-index)
 
 ## Index
-[lists](https://github.com/chaingng/python-tips/blob/master/list.md)
-[modules](https://github.com/chaingng/python-tips/blob/master/modules.md)
+- [lists](https://github.com/chaingng/python-tips/blob/master/list.md)
+- [modules](https://github.com/chaingng/python-tips/blob/master/modules.md)
 
 ## Interpreter
 
