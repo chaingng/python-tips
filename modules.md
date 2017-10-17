@@ -40,7 +40,7 @@ if __name__ == "__main__":
 ```
 
 ## The Module Search Path 
-e.g spam.py
+### e.g. spam.py
 1.  the interpreter first searches for a built-in module with that name
 1. searches for a file named spam.py in a list of directories given by the variable sys.path
 
@@ -77,7 +77,7 @@ C>
 ```
 
 ### dir()
-- find out which names a module defines
+#### find out which names a module defines
 ```
 >>> import fibo, sys
 >>> dir(fibo)
@@ -102,7 +102,7 @@ C>
  'thread_info', 'version', 'version_info', 'warnoptions']
 ```
 
-Without arguments, lists the names you have defined currently:
+#### Without arguments, lists the names you have defined currently:
 ```
 >>> a = [1, 2, 3, 4, 5]
 >>> import fibo
@@ -111,7 +111,7 @@ Without arguments, lists the names you have defined currently:
 ['__builtins__', '__name__', 'a', 'fib', 'fibo', 'sys']
 ```
 
-does not list the names of built-in functions and variables. If you want a list of those, they are defined in the standard module builtins:
+#### does not list the names of built-in functions and variables. If you want a list of those, they are defined in the standard module builtins:
 ```
 >>> import builtins
 >>> dir(builtins)  
