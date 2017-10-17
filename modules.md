@@ -40,7 +40,8 @@ if __name__ == "__main__":
 
 ```
 
-## The Module Search Path `spam.py`
+## The Module Search Path 
+e.g spam.py
 1.  the interpreter first searches for a built-in module with that name
 1. searches for a file named spam.py in a list of directories given by the variable sys.path
 
