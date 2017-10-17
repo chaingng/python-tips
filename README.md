@@ -1,7 +1,8 @@
 # python-tips
 
-respecting [python tutorial](https://docs.python.org/3/tutorial/index.html), 
-stock python-tips
+**respecting [python tutorial](https://docs.python.org/3/tutorial/index.html), and stock python-tips**
+
+## Reference Docs
 
 for standard objects and modules, see [Python Standard Library](https://docs.python.jp/3/library/index.html#library-index)  
 for language reference, see [Python Language Reference](https://docs.python.jp/3/reference/index.html#reference-index)
