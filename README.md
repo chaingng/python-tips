@@ -694,3 +694,106 @@ Annotations: {'ham': <class 'str'>, 'return': <class 'str'>, 'eggs': <class 'str
 Arguments: spam eggs
 'spam and eggs'
 ```
+
+## del
+
+### remove slices from a list or clear the entire list
+```
+>>> del a[0]
+>>> a
+[1, 66.25, 333, 333, 1234.5]
+>>> del a[2:4]
+>>> a
+[1, 66.25, 1234.5]
+>>> del a[:]
+>>> a
+[]
+```
+
+### del entire values
+```
+>>> del a
+```
+
+## Tuple
+
+- immutable
+- accessed via unpacking (see later in this section) or indexing (or even by attribute in the case of namedtuples)
+
+###  consists of a number of values separated by commas
+
+```
+>>> t = 12345, 54321, 'hello!'
+>>> t[0]
+12345
+>>> t
+(12345, 54321, 'hello!')
+>>> # Tuples may be nested:
+... u = t, (1, 2, 3, 4, 5)
+>>> u
+((12345, 54321, 'hello!'), (1, 2, 3, 4, 5))
+>>> # Tuples are immutable:
+... t[0] = 88888
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'tuple' object does not support item assignment
+>>> # but they can contain mutable objects:
+... v = ([1, 2, 3], [3, 2, 1])
+>>> v
+([1, 2, 3], [3, 2, 1])
+```
+
+### containing 0 or 1 items
+```
+>>> empty = ()
+>>> singleton = 'hello',    # <-- note trailing comma
+>>> len(empty)
+0
+>>> len(singleton)
+1
+>>> singleton
+('hello',)
+```
+
+### t = 12345, 54321, 'hello!' is an example of tuple packing
+```
+>>> x, y, z = t
+```
+
+## Sets
+- A set is an unordered collection with no duplicate elements
+- support mathematical operations like union, intersection, difference, and symmetric difference
+- to create an empty set you have to use set(), not {}
+
+## basic usage
+```
+>>> basket = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}
+>>> print(basket)                      # show that duplicates have been removed
+{'orange', 'banana', 'pear', 'apple'}
+>>> 'orange' in basket                 # fast membership testing
+True
+>>> 'crabgrass' in basket
+False
+
+>>> # Demonstrate set operations on unique letters from two words
+...
+>>> a = set('abracadabra')
+>>> b = set('alacazam')
+>>> a                                  # unique letters in a
+{'a', 'r', 'b', 'c', 'd'}
+>>> a - b                              # letters in a but not in b
+{'r', 'd', 'b'}
+>>> a | b                              # letters in either a or b
+{'a', 'c', 'r', 'd', 'b', 'm', 'z', 'l'}
+>>> a & b                              # letters in both a and b
+{'a', 'c'}
+>>> a ^ b                              # letters in a or b but not both
+{'r', 'd', 'b', 'm', 'z', 'l'}
+```
+
+## Dictionaries
+- a dictionary as an unordered set of key: value pairs, with the requirement that the keys are unique (within one dictionary).
+- indexed by keys, which can be any immutable type; strings and numbers can always be keys.
+- Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple contains any mutable object either directly or indirectly, it cannot be used as a key
+- can’t use lists as keys
+- A pair of braces creates an empty dictionary: {}
