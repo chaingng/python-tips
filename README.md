@@ -6,6 +6,9 @@ stock python-tips
 for standard objects and modules, see [Python Standard Library](https://docs.python.jp/3/library/index.html#library-index)  
 for language reference, see [Python Language Reference](https://docs.python.jp/3/reference/index.html#reference-index)
 
+## Index
+[lists](https://github.com/chaingng/python-tips/blob/master/list.md)
+
 ## Interpreter
 
 ### Run
