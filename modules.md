@@ -176,7 +176,7 @@ sound/                          Top-level package
 ```
 
 
-### it can also execute initialization code for the package or set the __all__ variable
+### it can also execute initialization code for the package or set the __all__ variable in a package’s __init__.py code
 ```
 __all__ = ["echo", "surround", "reverse"]
 ```
