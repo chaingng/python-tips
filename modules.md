@@ -147,7 +147,8 @@ does not list the names of built-in functions and variables. If you want a list 
 ```
 
 ## Package
-- __init__.py files are required to make Python treat the directories as containing packages
+
+### __init__.py files are required to make Python treat the directories as containing packages
 ```
 sound/                          Top-level package
       __init__.py               Initialize the sound package
@@ -175,7 +176,7 @@ sound/                          Top-level package
 ```
 
 
-- it can also execute initialization code for the package or set the __all__ variable
+### it can also execute initialization code for the package or set the __all__ variable
 ```
 __all__ = ["echo", "surround", "reverse"]
 ```
