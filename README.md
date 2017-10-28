@@ -17,6 +17,7 @@ for language reference, see [Python Language Reference](https://docs.python.jp/3
 - [for](https://github.com/chaingng/python-tips/blob/master/for.md)
 - [function](https://github.com/chaingng/python-tips/blob/master/function.md)
 - [if](https://github.com/chaingng/python-tips/blob/master/if.md)
+- [interpreter](https://github.com/chaingng/python-tips/blob/master/interpreter.md)
 - [lambda](https://github.com/chaingng/python-tips/blob/master/lambda.md)
 - [lists](https://github.com/chaingng/python-tips/blob/master/list.md)
 - [modules](https://github.com/chaingng/python-tips/blob/master/modules.md)
@@ -28,26 +29,6 @@ for language reference, see [Python Language Reference](https://docs.python.jp/3
 - [tuple](https://github.com/chaingng/python-tips/blob/master/tuple.md)
 - [range](https://github.com/chaingng/python-tips/blob/master/range.md)
 
-## Interpreter
-
-### Run
-```
-python3.6
-```
-
-type ctrl-D to exit.
-
-### Second way to run
-```
-python -c command [arg]
-```
-
-run script and run interpreter, use `-i` to run script.
-
-[Full Command Line Manual](https://docs.python.jp/3/using/cmdline.html#using-on-general)
-
-### Argument Passing
-run interpreter with argument, assigned to the argv variable in the sys module.
 
 ### Unix Script
 on top of the file, add
