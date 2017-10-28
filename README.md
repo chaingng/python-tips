@@ -8,6 +8,7 @@ for standard objects and modules, see [Python Standard Library](https://docs.pyt
 for language reference, see [Python Language Reference](https://docs.python.jp/3/reference/index.html#reference-index)
 
 ## Index
+- [annotation](https://github.com/chaingng/python-tips/blob/master/annotation.md)
 - [break](https://github.com/chaingng/python-tips/blob/master/break.md)
 - [condition](https://github.com/chaingng/python-tips/blob/master/condition.md)
 - [del](https://github.com/chaingng/python-tips/blob/master/del.md)
@@ -59,36 +60,6 @@ on top of the file, add
 # -*- coding: encoding -*-
 ```
 
-## if
-### elif and else
-```
->>> x = int(input("Please enter an integer: "))
-Please enter an integer: 42
->>> if x < 0:
-...     x = 0
-...     print('Negative changed to zero')
-... elif x == 0:
-...     print('Zero')
-... elif x == 1:
-...     print('Single')
-... else:
-...     print('More')
-...
-More
-```
-
-## Annotation
-```
->>> def f(ham: str, eggs: str = 'eggs') -> str:
-...     print("Annotations:", f.__annotations__)
-...     print("Arguments:", ham, eggs)
-...     return ham + ' and ' + eggs
-...
->>> f('spam')
-Annotations: {'ham': <class 'str'>, 'return': <class 'str'>, 'eggs': <class 'str'>}
-Arguments: spam eggs
-'spam and eggs'
-```
 
 ## Looping Techniques
 
