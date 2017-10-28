@@ -16,6 +16,7 @@ for language reference, see [Python Language Reference](https://docs.python.jp/3
 - [docstring](https://github.com/chaingng/python-tips/blob/master/docstring.md)
 - [for](https://github.com/chaingng/python-tips/blob/master/for.md)
 - [function](https://github.com/chaingng/python-tips/blob/master/function.md)
+- [if](https://github.com/chaingng/python-tips/blob/master/if.md)
 - [lambda](https://github.com/chaingng/python-tips/blob/master/lambda.md)
 - [lists](https://github.com/chaingng/python-tips/blob/master/list.md)
 - [modules](https://github.com/chaingng/python-tips/blob/master/modules.md)
