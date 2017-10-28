@@ -18,6 +18,7 @@ for language reference, see [Python Language Reference](https://docs.python.jp/3
 - [modules](https://github.com/chaingng/python-tips/blob/master/modules.md)
 - [condition](https://github.com/chaingng/python-tips/blob/master/condition.md)
 - [for](https://github.com/chaingng/python-tips/blob/master/for.md)
+- [print](https://github.com/chaingng/python-tips/blob/master/print.md)
 - [lambda](https://github.com/chaingng/python-tips/blob/master/lambda.md)
 - [break](https://github.com/chaingng/python-tips/blob/master/break.md)
 - [del](https://github.com/chaingng/python-tips/blob/master/del.md)
@@ -55,25 +56,6 @@ on top of the file, add
 on top of the file, add
 ```
 # -*- coding: encoding -*-
-```
-
-## print
-
-
-```
->>> i = 256*256
->>> print('The value of i is', i)
-The value of i is 65536
-```
-
-### argument `end` can be used to avoid the newline after the output, or end the output with a different string
-```
->>> a, b = 0, 1
->>> while b < 1000:
-...     print(b, end=',')
-...     a, b = b, a+b
-...
-1,1,2,3,5,8,13,21,34,55,89,144,233,377,610,987,
 ```
 
 ## if
