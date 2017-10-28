@@ -1,6 +1,6 @@
 # python-tips
 
-**respecting [python tutorial](https://docs.python.org/3/tutorial/index.html), and stock python-tips**
+**respecting [python tutorial](https://docs.python.org/3/tutorial/index.html) and stock python-tips**
 
 ## Reference Docs
 
