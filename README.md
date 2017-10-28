@@ -8,22 +8,23 @@ for standard objects and modules, see [Python Standard Library](https://docs.pyt
 for language reference, see [Python Language Reference](https://docs.python.jp/3/reference/index.html#reference-index)
 
 ## Index
-- [lists](https://github.com/chaingng/python-tips/blob/master/list.md)
-- [sets](https://github.com/chaingng/python-tips/blob/master/set.md)
-- [dict](https://github.com/chaingng/python-tips/blob/master/dict.md)
-- [tuple](https://github.com/chaingng/python-tips/blob/master/tuple.md)
-- [string](https://github.com/chaingng/python-tips/blob/master/string.md)
-- [numbers](https://github.com/chaingng/python-tips/blob/master/number.md)
-- [function](https://github.com/chaingng/python-tips/blob/master/function.md)
-- [modules](https://github.com/chaingng/python-tips/blob/master/modules.md)
-- [condition](https://github.com/chaingng/python-tips/blob/master/condition.md)
-- [for](https://github.com/chaingng/python-tips/blob/master/for.md)
-- [print](https://github.com/chaingng/python-tips/blob/master/print.md)
-- [lambda](https://github.com/chaingng/python-tips/blob/master/lambda.md)
 - [break](https://github.com/chaingng/python-tips/blob/master/break.md)
+- [condition](https://github.com/chaingng/python-tips/blob/master/condition.md)
 - [del](https://github.com/chaingng/python-tips/blob/master/del.md)
-- [range](https://github.com/chaingng/python-tips/blob/master/range.md)
+- [dict](https://github.com/chaingng/python-tips/blob/master/dict.md)
+- [docstring](https://github.com/chaingng/python-tips/blob/master/docstring.md)
+- [for](https://github.com/chaingng/python-tips/blob/master/for.md)
+- [function](https://github.com/chaingng/python-tips/blob/master/function.md)
+- [lambda](https://github.com/chaingng/python-tips/blob/master/lambda.md)
+- [lists](https://github.com/chaingng/python-tips/blob/master/list.md)
+- [modules](https://github.com/chaingng/python-tips/blob/master/modules.md)
+- [numbers](https://github.com/chaingng/python-tips/blob/master/number.md)
 - [pass](https://github.com/chaingng/python-tips/blob/master/pass.md)
+- [print](https://github.com/chaingng/python-tips/blob/master/print.md)
+- [sets](https://github.com/chaingng/python-tips/blob/master/set.md)
+- [string](https://github.com/chaingng/python-tips/blob/master/string.md)
+- [tuple](https://github.com/chaingng/python-tips/blob/master/tuple.md)
+- [range](https://github.com/chaingng/python-tips/blob/master/range.md)
 
 ## Interpreter
 
@@ -74,21 +75,6 @@ Please enter an integer: 42
 ...     print('More')
 ...
 More
-```
-
-## docstring
-```
->>> def my_function():
-...     """Do nothing, but document it.
-...
-...     No, really, it doesn't do anything.
-...     """
-...     pass
-...
->>> print(my_function.__doc__)
-Do nothing, but document it.
-
-    No, really, it doesn't do anything.
 ```
 
 ## Annotation
