@@ -13,6 +13,7 @@ for language reference, see [Python Language Reference](https://docs.python.jp/3
 - [dict](https://github.com/chaingng/python-tips/blob/master/dict.md)
 - [tuple](https://github.com/chaingng/python-tips/blob/master/tuple.md)
 - [string](https://github.com/chaingng/python-tips/blob/master/string.md)
+- [numbers](https://github.com/chaingng/python-tips/blob/master/number.md)
 - [modules](https://github.com/chaingng/python-tips/blob/master/modules.md)
 - [condition](https://github.com/chaingng/python-tips/blob/master/condition.md)
 - [lambda](https://github.com/chaingng/python-tips/blob/master/lambda.md)
@@ -52,38 +53,6 @@ on top of the file, add
 on top of the file, add
 ```
 # -*- coding: encoding -*-
-```
-
-### Numbers
-```
->>> 17 / 3  # classic division returns a float
-5.666666666666667
->>>
->>> 17 // 3  # floor division discards the fractional part
-5
->>> 17 % 3  # the % operator returns the remainder of the division
-2
->>> 5 * 3 + 2  # result * divisor + remainder
-17
-```
-
-```
->>> 5 ** 2  # 5 squared
-25
->>> 2 ** 7  # 2 to the power of 7
-128
-```
-
-### use the last printed expression `-`
-```
->>> tax = 12.5 / 100
->>> price = 100.50
->>> price * tax
-12.5625
->>> price + _
-113.0625
->>> round(_, 2)
-113.06
 ```
 
 ## print
