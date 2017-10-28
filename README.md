@@ -10,6 +10,7 @@ for language reference, see [Python Language Reference](https://docs.python.jp/3
 ## Index
 - [lists](https://github.com/chaingng/python-tips/blob/master/list.md)
 - [modules](https://github.com/chaingng/python-tips/blob/master/modules.md)
+- [condition](https://github.com/chaingng/python-tips/blob/master/condition.md)
 - [break](https://github.com/chaingng/python-tips/blob/master/break.md)
 - [del](https://github.com/chaingng/python-tips/blob/master/del.md)
 - [range](https://github.com/chaingng/python-tips/blob/master/range.md)
@@ -819,27 +820,4 @@ pear
 ...
 >>> filtered_data
 [56.2, 51.7, 55.3, 52.5, 47.8]
-```
-
-## Condition
-- Comparisons can be chained. For example, a < b == c tests whether a is less than b and moreover b equals c
-
-
-### `and` and `or` are so-called short-circuit operators: their arguments are evaluated from left to right, and evaluation stops as soon as the outcome is determined
-```
->>> string1, string2, string3 = '', 'Trondheim', 'Hammer Dance'
->>> non_null = string1 or string2 or string3
->>> non_null
-'Trondheim'
-```
-
-## Comparing Sequences and Other Types
-```
-(1, 2, 3)              < (1, 2, 4)
-[1, 2, 3]              < [1, 2, 4]
-'ABC' < 'C' < 'Pascal' < 'Python'
-(1, 2, 3, 4)           < (1, 2, 4)
-(1, 2)                 < (1, 2, -1)
-(1, 2, 3)             == (1.0, 2.0, 3.0)
-(1, 2, ('aa', 'ab'))   < (1, 2, ('abc', 'a'), 4)
 ```
