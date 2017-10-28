@@ -21,7 +21,7 @@ for language reference, see [Python Language Reference](https://docs.python.jp/3
 - [break](https://github.com/chaingng/python-tips/blob/master/break.md)
 - [del](https://github.com/chaingng/python-tips/blob/master/del.md)
 - [range](https://github.com/chaingng/python-tips/blob/master/range.md)
-
+- [pass](https://github.com/chaingng/python-tips/blob/master/pass.md)
 
 ## Interpreter
 
@@ -117,14 +117,6 @@ defenestrate 12
 ...
 >>> words
 ['defenestrate', 'cat', 'window', 'defenestrate']
-```
-
-## pass
-
-### does nothing
-```
->>> while True:
-...     pass  # Busy-wait for keyboard interrupt (Ctrl+C)
 ```
 
 
